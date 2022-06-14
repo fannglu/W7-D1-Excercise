@@ -13,9 +13,10 @@ function Example() {
     </Canvas>
   );
 }
+export default Example;
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<Example />, rootElement);
+// const rootElement = document.getElementById("root");
+// ReactDOM.render(<Example />, rootElement);
 
 /* NOTE TO FUTURE SELF
 

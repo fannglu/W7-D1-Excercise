@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+import "./App.css";
+import React, { Component } from "react";
+import BarChart from "./AnimatedBar/BarChart";
+import TreeApp from "./CollapsibleTree/Tree";
+import data from "./CollapsibleTree/data";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Example from "./Sphere/index"
+// import { useViewportSize } from "@react-vertex/dom-hooks";
+
+class App extends Component {
+  render() {
+    //  const { width, height } = useViewportSize();
+    return (
+      <div className="App">
+        <p>Test</p>
+        <div>
+          <BarChart />
+        </div>
+        <div>
+          <TreeApp data={data} width={600} height={500} />
+        </div>
+        <div>
+          <Example />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
